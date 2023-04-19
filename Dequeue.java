@@ -1,10 +1,10 @@
-class Que{
+class Q {
     int[] arr;
     int front;
     int rear;
     int size;
 
-    Que(int x) {
+    Q(int x) {
         size =x;
         arr = new int[size];
         front = 0;
@@ -40,26 +40,14 @@ class Que{
     boolean isFull() {
         return (front == 0 && rear == size - 1);
     }
-    void printlist(){
-        while(front <= rear)
-        {
-            System.out.print(arr[front]+ " ");
-            front++;
-        }
-    }
-
 }
-public class Traversing {
+public class Dequeue {
     public static void main(String[] args) {
-        Que q = new Que(10);
-        q.enqueue(20);
-        q.enqueue(30);
-        q.enqueue(60);
-        q.dequeue();
-        q.dequeue();
-        System.out.print("My queue is : ");
-        q.printlist();
-
-
+        Q que = new Q(10);
+        que.enqueue(20);
+        que.enqueue(30);
+        que.enqueue(60);
+        que.dequeue();
+        que.dequeue();
     }
 }
